@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>yardimci</class>
+ <widget class="QDialog" name="yardimci">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>609</width>
+    <height>494</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Modul Adi</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="editModul"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QListWidget" name="listModuller"/>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLineEdit" name="editTip"/>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textYardim"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>editModul</sender>
+   <signal>returnPressed()</signal>
+   <receiver>yardimci</receiver>
+   <slot>doldur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listModuller</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>yardimci</receiver>
+   <slot>detay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>doldur()</slot>
+  <slot>detay()</slot>
+ </slots>
+</ui>
