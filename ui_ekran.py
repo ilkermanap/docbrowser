@@ -30,6 +30,9 @@ class Ui_yardimci(object):
         self.listModuller = QtWidgets.QListWidget(yardimci)
         self.listModuller.setObjectName("listModuller")
         self.horizontalLayout_2.addWidget(self.listModuller)
+        self.listModul = QtWidgets.QListWidget(yardimci)
+        self.listModul.setObjectName("listModul")
+        self.horizontalLayout_2.addWidget(self.listModul)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.editTip = QtWidgets.QLineEdit(yardimci)
@@ -42,12 +45,13 @@ class Ui_yardimci(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(yardimci)
-        self.editModul.returnPressed.connect(yardimci.doldur)
-        self.listModuller.itemClicked['QListWidgetItem*'].connect(yardimci.detay)
+        self.listModul.itemClicked['QListWidgetItem*'].connect(yardimci.detay)
+        self.listModuller.itemClicked['QListWidgetItem*'].connect(yardimci.modulsec)
+        self.editModul.textChanged['QString'].connect(yardimci.arama)
         QtCore.QMetaObject.connectSlotsByName(yardimci)
 
     def retranslateUi(self, yardimci):
         _translate = QtCore.QCoreApplication.translate
         yardimci.setWindowTitle(_translate("yardimci", "Dialog"))
-        self.label.setText(_translate("yardimci", "Modul Adi"))
+        self.label.setText(_translate("yardimci", "Modul Ara"))
 

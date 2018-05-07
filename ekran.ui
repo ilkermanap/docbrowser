@@ -19,7 +19,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Modul Adi</string>
+        <string>Modul Ara</string>
        </property>
       </widget>
      </item>
@@ -47,6 +47,9 @@
       <widget class="QListWidget" name="listModuller"/>
      </item>
      <item>
+      <widget class="QListWidget" name="listModul"/>
+     </item>
+     <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QLineEdit" name="editTip"/>
@@ -63,23 +66,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>editModul</sender>
-   <signal>returnPressed()</signal>
-   <receiver>yardimci</receiver>
-   <slot>doldur()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>275</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>314</x>
-     <y>21</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>listModuller</sender>
+   <sender>listModul</sender>
    <signal>itemClicked(QListWidgetItem*)</signal>
    <receiver>yardimci</receiver>
    <slot>detay()</slot>
@@ -94,9 +81,43 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>listModuller</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>yardimci</receiver>
+   <slot>modulsec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editModul</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>yardimci</receiver>
+   <slot>arama()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>425</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>doldur()</slot>
   <slot>detay()</slot>
+  <slot>modulsec()</slot>
+  <slot>arama()</slot>
  </slots>
 </ui>
