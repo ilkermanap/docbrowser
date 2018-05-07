@@ -6,4 +6,4 @@ Istediginiz modulun adini yazip enter'a basin, listeye o modulun icindeki degisk
 Listeden sectiginiz isim icin de modul icindeki bilgi sag tarafta gorunecektir.
 
 
-![Screenshot](screenshot.jpg)
+![Screenshot](screenshot.png)
